@@ -35,10 +35,14 @@ export class AppComponent {
   //Used to determine which choice user has selected
   phoneType: number;
 
+  //Set user choice (text or phone)
+  setPhoneType(val) {
+    this.phoneType = val;
+  }
+
   callNumber() {
     phone.dial(String(this.phoneNumber), true)
   }
-
 
   textNumber() {
     /* 
@@ -50,11 +54,4 @@ export class AppComponent {
       console.log(result);
     })
   }
-
-  //Set user choice (text or phone)
-  setPhoneType(val) {
-    this.phoneType = val;
-  }
-
-
 }
